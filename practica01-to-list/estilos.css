@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #353f5b;
+}
+
+main{
+    background-color: white;
+    width: 500px;
+    height: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    border: thin solid black;
+}
+
+/* main, header, section, section > div {
+    border: thin solid black;
+} */
+
+/* Sección para agregar tereas */
+
+header{
+    width: 400px;
+    height: 80px;
+    margin: 30px auto;
+}
+
+header > h2{
+    text-align: center;
+    padding: 10px;
+}
+
+header > input{
+    float: left;
+    width: 75%;
+    height: 30px;
+    padding: 6px;
+    border: thin solid black;
+}
+
+header > button{
+    background-color: #423a6f;
+    color: white;
+    float: right;
+    width: 20%;
+    height: 30px;
+    border-radius: 6px;
+}
+
+
+/* Sección de la lista de tareas */
+
+section{
+    width: 400px;
+    height: 360px;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+section > div{
+    background-color: #423a6f;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+section > div > label{
+    float: left;
+    color: white;
+    width: 70%;
+    height: 35px;
+    padding: 6px 10px;
+}
+section > div > button{
+    float: right;
+    width: 10%;
+    height: 30px;
+    margin: 5px;
+}
