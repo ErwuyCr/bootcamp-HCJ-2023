@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dado-container {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: thin solid black;
+    margin: 50px;
+}
+
+.black-circle {
+    position: absolute;
+    background-color: black;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.dado-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dado-top-right {
+    top: 5%;
+    right: 5%;
+}
+
+.dado-center-right {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.dado-bottom-right {
+    bottom: 5%;
+    right: 5%;
+}
+
+.dado-top-left {
+    top: 5%;
+    left: 5%;
+}
+
+.dado-center-left {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+.dado-bottom-left {
+    bottom: 5%;
+    left: 5%;
+}
+
