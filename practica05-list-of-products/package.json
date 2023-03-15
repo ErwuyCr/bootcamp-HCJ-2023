@@ -1,0 +1,14 @@
+{
+  "name": "practica05-list-of-products",
+  "version": "1.0.0",
+  "description": "List of products",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc --watch"
+  },
+  "author": "ErwuyCr",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.5"
+  }
+}
