@@ -1,26 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/estilos.css">
-    <script defer src="assets/custom_script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script defer src="./assets/script.js"></script>
+  <title>List of Products</title>
 </head>
 <body>
-    <main>
-        <header>
-            <h2>ToDo List</h2>
-            <div>
-                <input type="text" id="inputTextTask">
-                <button id="taskAddButton">Add</button>
-            </div>
-        </header>
-        <section id="todoListTaskSeccion">            
-        </section>
-    </main>    
+  <div class="main-container">
+  <div class="container-buttons">
+    <div class="products-buttons">
+      <button class="up"><i class="bi bi-chevron-up"></i></button>
+      <button class="upp"><i class="bi bi-chevron-double-up"></i></button>
+      <button class="doww"><i class="bi bi-chevron-double-down"></i></button>
+      <button class="down"><i class="bi bi-chevron-down"></i></button>
+    </div>
+  </div>
+  <div class="container-products">
+    <div class="header-products">
+      <label for="">List of Products</label>
+    </div>
+    <div class="search-products">
+      <input type="text" placeholder="Filter by name" maxlength="20">
+      <i class="bi bi-search mysearch"></i>
+    </div>
+    <div class="list-products" id="list-products">
+      <!--<div class="product" >
+        <div class="product-img">
+          <img src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg" alt="reloj">
+        </div>
+        <div class="product-name">
+          <h5>Bamboo Watch</h5>
+          <i class="bi bi-tag"></i>
+          <span>etiqueta</span>
+        </div>
+        <div class="product-price">
+          <h6>$405</h6>
+          <span class="badge text-bg-warning">LOWSTOCK</span>
+        </div>-->
+    </div>
+  </div>
 </body>
 </html>
