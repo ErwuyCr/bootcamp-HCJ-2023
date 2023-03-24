@@ -1,5 +1,4 @@
-"use strict";
-let productosDummy = {
+export const productsDummy = {
     "products": [
         {
             "id": 1,
@@ -173,79 +172,3 @@ let productosDummy = {
         }
     ]
 };
-let listProducts = productosDummy.products.map((product) => {
-    return {
-        title: product.title,
-        price: product.price,
-        stock: product.stock,
-        category: product.category,
-        image: product.images[0]
-    };
-});
-const divListProduct = document.getElementById("list-products");
-createProduct();
-function createProduct() {
-    listProducts.forEach((product) => {
-        let divProduct = document.createElement("div");
-        divProduct.setAttribute("class", "product");
-        let imgDIV = createProductImg(product.image);
-        let nameDIV = createProductName(product.title, product.category);
-        let priceDIV = createProductPrice(product.price, product.stock);
-        divProduct.appendChild(imgDIV);
-        divProduct.appendChild(nameDIV);
-        divProduct.appendChild(priceDIV);
-        divListProduct.appendChild(divProduct);
-    });
-}
-function createProductImg(image) {
-    let imgProduct = document.createElement("img");
-    imgProduct.setAttribute("src", image);
-    let divProductImg = document.createElement("div");
-    divProductImg.classList.add("product-img");
-    divProductImg.appendChild(imgProduct);
-    return divProductImg;
-}
-function createProductName(title, category) {
-    let spanProduct = document.createElement("span");
-    spanProduct.innerText = category;
-    let iconTag = document.createElement("i");
-    iconTag.setAttribute("class", "bi bi-tag");
-    let nameProduct = document.createElement("h5");
-    nameProduct.innerText = title;
-    let divProductName = document.createElement("div");
-    divProductName.setAttribute("class", "product-name");
-    divProductName.appendChild(nameProduct);
-    divProductName.appendChild(iconTag);
-    divProductName.appendChild(spanProduct);
-    return divProductName;
-}
-function createProductPrice(price, stock) {
-    let spanStock = document.createElement("span");
-    let typeStock = validaSock(stock);
-    console.log(typeStock);
-    spanStock.innerText = typeStock[0].toString();
-    spanStock.setAttribute("class", typeStock[1].toString());
-    let priceProduct = document.createElement("h6");
-    priceProduct.innerText = "$" + price;
-    let divProductPrice = document.createElement("div");
-    divProductPrice.setAttribute("class", "product-price");
-    divProductPrice.appendChild(priceProduct);
-    divProductPrice.appendChild(spanStock);
-    return divProductPrice;
-}
-function validaSock(stock) {
-    let messageStock = [];
-    if (stock == 0) {
-        messageStock.push("outofstock");
-        messageStock.push("badge text-bg-danger");
-    }
-    else if (stock < 10) {
-        messageStock.push("lowstock");
-        messageStock.push("badge text-bg-warning");
-    }
-    else {
-        messageStock.push("instock");
-        messageStock.push("badge text-bg-success");
-    }
-    return messageStock;
-}
