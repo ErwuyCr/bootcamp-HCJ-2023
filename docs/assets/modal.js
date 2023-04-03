@@ -19,10 +19,4 @@ export class Modal {
         this.ref.querySelector('#category').textContent = category;
         this.ref.querySelector('#imgModal').setAttribute("src", img);
     }
-    setBody(...elements) {
-        this.ref.querySelector('#modalBody').innerHTML = '';
-        elements.forEach(element => {
-            this.ref.querySelector('#modalBody').appendChild(element);
-        });
-    }
 }

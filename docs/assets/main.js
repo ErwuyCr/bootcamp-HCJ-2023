@@ -1,17 +1,7 @@
-import { productsDummy } from "./dataDummy.js";
-import { RunListProduct } from "./runListProduct.js";
-let listProducts = productsDummy.products.map((product) => {
-    return {
-        title: product.title,
-        description: product.description,
-        price: product.price,
-        stock: product.stock,
-        category: product.category,
-        image: product.images[0]
-    };
-});
-const ContainerProductsRef = document.getElementById("list-products");
+import { ListProduct } from "./list-product.js";
+const containerButtonsControlRef = document.getElementById("products-buttons");
 const searchInputRef = document.getElementById("input-products");
+const containerProductsRef = document.getElementById("list-products");
+const templateRef = document.getElementById("template-product");
 const modalRef = document.getElementById("main-modal-container");
-const runListOfProduct = new RunListProduct(listProducts, ContainerProductsRef, modalRef, searchInputRef);
-runListOfProduct.createProducts();
+const listProduct = new ListProduct(containerButtonsControlRef, searchInputRef, containerProductsRef, templateRef, modalRef);
