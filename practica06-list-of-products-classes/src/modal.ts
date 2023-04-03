@@ -26,10 +26,10 @@ export class Modal {
         this.ref.querySelector('#imgModal')!.setAttribute("src", img);
     }
 
-    setBody(...elements:HTMLElement[]){
-        this.ref.querySelector('#modalBody')!.innerHTML = '';
-        elements.forEach(element => {
-            this.ref.querySelector('#modalBody')!.appendChild(element);
-        });
-    }
+    // setBody(...elements:HTMLElement[]){
+    //     this.ref.querySelector('#modalBody')!.innerHTML = '';
+    //     elements.forEach(element => {
+    //         this.ref.querySelector('#modalBody')!.appendChild(element);
+    //     });
+    // }
 }

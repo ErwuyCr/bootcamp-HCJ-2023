@@ -63,6 +63,7 @@
 
 .modal-head i {
     font-size: 150%;
+    cursor: pointer;
 }
 
 .price > p {
